@@ -1,5 +1,21 @@
 // ===== CONFIGURATION =====
-const BIRTHDAY_DATE = new Date('2026-01-16T00:00:00+05:30');
+// Calculate next January 16th at midnight IST
+function getNextBirthday() {
+    const now = new Date();
+    const currentYear = now.getFullYear();
+
+    // Try this year's birthday
+    let birthday = new Date(`${currentYear}-01-16T00:00:00+05:30`);
+
+    // If this year's birthday has passed, use next year
+    if (now > birthday) {
+        birthday = new Date(`${currentYear + 1}-01-16T00:00:00+05:30`);
+    }
+
+    return birthday;
+}
+
+const BIRTHDAY_DATE = getNextBirthday();
 const PHOTO_FOLDER = 'Photos-1-001/';
 const PHOTO_FILES = [
     '0f760448-f16d-4cee-9d26-9179ab5ed748.jpg',
