@@ -1,21 +1,4 @@
 // ===== CONFIGURATION =====
-// Calculate next January 16th at midnight IST
-function getNextBirthday() {
-    const now = new Date();
-    const currentYear = now.getFullYear();
-
-    // Try this year's birthday
-    let birthday = new Date(`${currentYear}-01-16T00:00:00+05:30`);
-
-    // If this year's birthday has passed, use next year
-    if (now > birthday) {
-        birthday = new Date(`${currentYear + 1}-01-16T00:00:00+05:30`);
-    }
-
-    return birthday;
-}
-
-const BIRTHDAY_DATE = getNextBirthday();
 const PHOTO_FOLDER = 'Photos-1-001/';
 const PHOTO_FILES = [
     '0f760448-f16d-4cee-9d26-9179ab5ed748.jpg',
@@ -36,8 +19,6 @@ const PHOTO_FILES = [
     'e02e721a-c1e3-4955-aa3c-7f5ae68787fc.jpg',
     'e5ac7477-6e8e-4acd-8257-c502691f70e5.jpg'
 ];
-
-let celebrationTriggered = false;
 
 // ===== CUSTOM CURSOR =====
 const cursor = document.querySelector('.cursor');
@@ -85,36 +66,8 @@ particlesJS('particles-js', {
     }
 });
 
-// ===== COUNTDOWN TIMER =====
-function updateCountdown() {
-    const now = new Date();
-    const difference = BIRTHDAY_DATE - now;
-
-    if (difference > 0) {
-        const days = Math.floor(difference / (1000 * 60 * 60 * 24));
-        const hours = Math.floor((difference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-        const minutes = Math.floor((difference % (1000 * 60 * 60)) / (1000 * 60));
-        const seconds = Math.floor((difference % (1000 * 60)) / 1000);
-
-        document.getElementById('days').textContent = String(days).padStart(2, '0');
-        document.getElementById('hours').textContent = String(hours).padStart(2, '0');
-        document.getElementById('minutes').textContent = String(minutes).padStart(2, '0');
-        document.getElementById('seconds').textContent = String(seconds).padStart(2, '0');
-    } else {
-        document.getElementById('days').textContent = '00';
-        document.getElementById('hours').textContent = '00';
-        document.getElementById('minutes').textContent = '00';
-        document.getElementById('seconds').textContent = '00';
-
-        if (!celebrationTriggered) {
-            celebrationTriggered = true;
-            setTimeout(triggerCelebration, 1000);
-        }
-    }
-}
-
-setInterval(updateCountdown, 1000);
-updateCountdown();
+// Auto-trigger celebration 3 seconds after page load
+setTimeout(triggerCelebration, 3000);
 
 // ===== PHOTO GALLERY =====
 function loadPhotoGallery() {
@@ -394,18 +347,17 @@ function screenFlash() {
 function triggerCelebration() {
     console.log('🎉 PREMIUM BIRTHDAY CELEBRATION! 🎉');
 
-    // Hide countdown, show birthday message
-    const countdownContainer = document.getElementById('countdownContainer');
-    const birthdayReveal = document.getElementById('birthdayReveal');
+    // Hide celebration indicator
+    const celebrationIndicator = document.getElementById('celebrationIndicator');
+    if (celebrationIndicator) {
+        celebrationIndicator.style.transition = 'all 0.5s ease';
+        celebrationIndicator.style.opacity = '0';
+        celebrationIndicator.style.transform = 'scale(0.8)';
 
-    countdownContainer.style.transition = 'all 0.8s ease';
-    countdownContainer.style.opacity = '0';
-    countdownContainer.style.transform = 'scale(0.8)';
-
-    setTimeout(() => {
-        countdownContainer.classList.add('hidden');
-        birthdayReveal.classList.remove('hidden');
-    }, 800);
+        setTimeout(() => {
+            celebrationIndicator.style.display = 'none';
+        }, 500);
+    }
 
     // MASSIVE OPENING - Screen flash + shake
     screenFlash();
@@ -437,7 +389,7 @@ function triggerCelebration() {
         setTimeout(() => createTrail(), i * 150);
     }
 
-    // Continue premium celebration for 3 minutes
+    // Continue premium celebration for 15 seconds
     let count = 0;
     const interval = setInterval(() => {
         // Multiple effects every second
@@ -461,7 +413,7 @@ function triggerCelebration() {
         }
 
         count++;
-        if (count >= 180) clearInterval(interval);
+        if (count >= 15) clearInterval(interval);
     }, 1000);
 }
 
