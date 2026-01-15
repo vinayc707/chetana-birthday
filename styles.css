@@ -38,7 +38,6 @@ body {
     background: #0a0a0a;
     color: #ffffff;
     overflow-x: hidden;
-    cursor: none;
 }
 
 .container {
@@ -55,41 +54,7 @@ body {
     display: none !important;
 }
 
-/* ===== CUSTOM CURSOR ===== */
-.cursor,
-.cursor-follower {
-    width: 20px;
-    height: 20px;
-    border-radius: 50%;
-    position: fixed;
-    pointer-events: none;
-    z-index: 99999;
-    transition: transform 0.2s ease;
-}
 
-.cursor {
-    background: rgba(255, 255, 255, 0.8);
-    mix-blend-mode: difference;
-}
-
-.cursor-follower {
-    width: 40px;
-    height: 40px;
-    border: 2px solid rgba(255, 255, 255, 0.3);
-    background: transparent;
-    transition: transform 0.3s ease, width 0.3s ease, height 0.3s ease;
-}
-
-/* ===== PARTICLES BACKGROUND ===== */
-#particles-js {
-    position: fixed;
-    width: 100%;
-    height: 100%;
-    top: 0;
-    left: 0;
-    z-index: 0;
-    opacity: 0.3;
-}
 
 /* ===== HERO SECTION ===== */
 .hero-section {
@@ -1209,4 +1174,19 @@ body {
 
 [data-aos="flip-left"].aos-animate {
     transform: perspective(1000px) rotateY(0);
+}
+/* ===== ADDITIONAL MOBILE OPTIMIZATIONS ===== */
+@media (max-width: 768px) {
+    .food-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .makeup-grid {
+        grid-template-columns: 1fr;
+        padding: 1.5rem;
+    }
+
+    .bento-grid {
+        grid-template-columns: 1fr !important;
+    }
 }
