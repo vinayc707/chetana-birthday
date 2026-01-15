@@ -14,7 +14,17 @@
     <title>Happy Birthday Chetu! 💜✨</title>
     <meta name="description" content="A special birthday celebration for theclassybuzz">
 
-    <!-- Google Fonts -->
+    <!-- DNS Prefetch for faster external resource loading -->
+    <link rel="dns-prefetch" href="https://fonts.googleapis.com">
+    <link rel="dns-prefetch" href="https://fonts.gstatic.com">
+    <link rel="dns-prefetch" href="https://cdnjs.cloudflare.com">
+    <link rel="dns-prefetch" href="https://cdn.jsdelivr.net">
+
+    <!-- Preconnect for critical resources -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <!-- Google Fonts - Optimized with display=swap -->
     <link
         href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;900&family=Playfair+Display:wght@700;900&family=Great+Vibes&display=swap"
         rel="stylesheet">
@@ -22,7 +32,7 @@
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
-    <link rel="stylesheet" href="styles.css?v=20260116">
+    <link rel="stylesheet" href="styles.css?v=20260116b">
 </head>
 
 <body>
@@ -35,7 +45,7 @@
 
     <!-- Hero Section with Video Background -->
     <section class="hero-section" id="home">
-        <video class="hero-video" autoplay muted loop playsinline>
+        <video class="hero-video" autoplay muted loop playsinline preload="metadata">
             <source src="Photos-1-001/e5ac7477-6e8e-4acd-8257-c502691f70e5.mp4" type="video/mp4">
         </video>
         <div class="hero-overlay"></div>
@@ -126,7 +136,7 @@
                 <div class="food-grid">
                     <div class="food-card" data-aos="zoom-in" data-aos-delay="100">
                         <div class="food-image">
-                            <img src="mcspicy_paneer_meal_1768461668490.png" alt="McSpicy Paneer Meal">
+                            <img src="mcspicy_paneer_meal_1768461668490.png" alt="McSpicy Paneer Meal" loading="lazy">
                             <div class="food-overlay">
                                 <i class="fas fa-heart"></i>
                             </div>
@@ -138,7 +148,7 @@
                     </div>
                     <div class="food-card" data-aos="zoom-in" data-aos-delay="200">
                         <div class="food-image">
-                            <img src="paneer_makhani_pizza_1768461689726.png" alt="Paneer Makhani Pizza">
+                            <img src="paneer_makhani_pizza_1768461689726.png" alt="Paneer Makhani Pizza" loading="lazy">
                             <div class="food-overlay">
                                 <i class="fas fa-heart"></i>
                             </div>
@@ -150,7 +160,7 @@
                     </div>
                     <div class="food-card" data-aos="zoom-in" data-aos-delay="300">
                         <div class="food-image">
-                            <img src="nanded_khichadi_1768461710983.png" alt="Nanded Khichadi">
+                            <img src="nanded_khichadi_1768461710983.png" alt="Nanded Khichadi" loading="lazy">
                             <div class="food-overlay">
                                 <i class="fas fa-heart"></i>
                             </div>
@@ -162,7 +172,7 @@
                     </div>
                     <div class="food-card" data-aos="zoom-in" data-aos-delay="400">
                         <div class="food-image">
-                            <img src="biryani_dish_1768461731261.png" alt="Biryani">
+                            <img src="biryani_dish_1768461731261.png" alt="Biryani" loading="lazy">
                             <div class="food-overlay">
                                 <i class="fas fa-heart"></i>
                             </div>
@@ -179,7 +189,7 @@
             <div class="makeup-showcase" data-aos="fade-up">
                 <div class="makeup-grid">
                     <div class="makeup-image-col">
-                        <img src="makeup_collection_1768461752792.png" alt="Makeup Collection">
+                        <img src="makeup_collection_1768461752792.png" alt="Makeup Collection" loading="lazy">
                     </div>
                     <div class="makeup-content-col">
                         <h3>💄 Your Creative Canvas ✨</h3>
@@ -311,9 +321,9 @@
     <!-- Test Button (Hidden for production) -->
     <button class="test-btn hidden" id="testBtn">🎆 Test Celebration</button>
 
-    <!-- Particles.js -->
-    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
-    <script src="script.js?v=20260116"></script>
+    <!-- Particles.js - Deferred for faster page load -->
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js" defer></script>
+    <script src="script.js?v=20260116b" defer></script>
 </body>
 
 </html>
