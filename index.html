@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Birthday Chetana! 💜✨</title>
+    <meta name="description" content="A special birthday celebration for Chetana Wawle">
+
+    <!-- Google Fonts -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;900&family=Playfair+Display:wght@700;900&family=Great+Vibes&display=swap"
+        rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <!-- Particle Background -->
+    <div id="particles-js"></div>
+
+    <!-- Custom Cursor -->
+    <div class="cursor"></div>
+    <div class="cursor-follower"></div>
+
+    <!-- Hero Section with Video Background -->
+    <section class="hero-section" id="home">
+        <video class="hero-video" autoplay muted loop playsinline>
+            <source src="Photos-1-001/e5ac7477-6e8e-4acd-8257-c502691f70e5.mp4" type="video/mp4">
+        </video>
+        <div class="hero-overlay"></div>
+
+        <div class="hero-content">
+            <!-- Glassmorphism Countdown -->
+            <div class="countdown-glass" id="countdownContainer">
+                <h3 class="countdown-label">वाट पाहा... काहीतरी खास येतंय! ✨</h3>
+                <div class="countdown-grid">
+                    <div class="countdown-card">
+                        <div class="countdown-number" id="days">00</div>
+                        <div class="countdown-text">Days</div>
+                    </div>
+                    <div class="countdown-card">
+                        <div class="countdown-number" id="hours">00</div>
+                        <div class="countdown-text">Hours</div>
+                    </div>
+                    <div class="countdown-card">
+                        <div class="countdown-number" id="minutes">00</div>
+                        <div class="countdown-text">Minutes</div>
+                    </div>
+                    <div class="countdown-card">
+                        <div class="countdown-number" id="seconds">00</div>
+                        <div class="countdown-text">Seconds</div>
+                    </div>
+                </div>
+                <p class="countdown-date">January 16, 2026 🎂</p>
+            </div>
+
+            <!-- Birthday Reveal (Hidden Initially) -->
+            <div class="birthday-reveal hidden" id="birthdayReveal">
+                <h1 class="birthday-title">Happy Birthday!</h1>
+                <h2 class="birthday-name">Chetana Wawle</h2>
+                <p class="birthday-message">You're Absolutely Amazing! 💖✨</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Welcome Section -->
+    <section class="welcome-section">
+        <div class="container">
+            <div class="blob-bg"></div>
+            <div class="welcome-content">
+                <h2 class="section-title" data-aos="fade-up">A Special Day for a Special Person 💜</h2>
+                <p class="welcome-text" data-aos="fade-up" data-aos-delay="100">
+                    Today we celebrate someone truly extraordinary. A woman who lights up every room,
+                    turns dreams into reality, and inspires everyone around her.
+                </p>
+                <div class="qualities-grid">
+                    <div class="quality-card" data-aos="zoom-in" data-aos-delay="200">
+                        <i class="fas fa-palette"></i>
+                        <h3>Makeup Artist</h3>
+                        <p>Creating beauty & building an empire 💄</p>
+                    </div>
+                    <div class="quality-card" data-aos="zoom-in" data-aos-delay="300">
+                        <i class="fab fa-instagram"></i>
+                        <h3>@theclassybuzz</h3>
+                        <p>Inspiring thousands daily ✨</p>
+                    </div>
+                    <div class="quality-card" data-aos="zoom-in" data-aos-delay="400">
+                        <i class="fas fa-camera"></i>
+                        <h3>Model</h3>
+                        <p>Owning every frame 📸</p>
+                    </div>
+                    <div class="quality-card" data-aos="zoom-in" data-aos-delay="500">
+                        <i class="fas fa-crown"></i>
+                        <h3>Entrepreneur</h3>
+                        <p>Building her legacy 👑</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Photo Gallery Section - Bento Grid -->
+    <section class="gallery-section" id="gallery">
+        <div class="container-fluid">
+            <h2 class="section-title text-center" data-aos="fade-up">Beautiful Moments 📸</h2>
+            <p class="section-subtitle text-center" data-aos="fade-up" data-aos-delay="100">A glimpse into your amazing
+                journey</p>
+
+            <div class="bento-grid" id="photoGallery">
+                <!-- Photos will be dynamically loaded -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Favorite Foods Section -->
+    <section class="favorites-section" id="favorites">
+        <div class="container">
+            <h2 class="section-title text-center" data-aos="fade-up">Your Favorite Things 💜✨</h2>
+            <p class="section-subtitle text-center" data-aos="fade-up" data-aos-delay="100">All the things that make you
+                smile 😊</p>
+
+            <!-- Food Favorites -->
+            <div class="favorites-category">
+                <h3 class="category-title" data-aos="fade-right">
+                    <i class="fas fa-utensils"></i> 🍕 Culinary Delights 🍽️
+                </h3>
+                <div class="food-grid">
+                    <div class="food-card" data-aos="zoom-in" data-aos-delay="100">
+                        <div class="food-image">
+                            <img src="mcspicy_paneer_meal_1768461668490.png"
+                                alt="McSpicy Paneer Meal">
+                            <div class="food-overlay">
+                                <i class="fas fa-heart"></i>
+                            </div>
+                        </div>
+                        <div class="food-content">
+                            <h4>🍔 McSpicy Paneer Meal</h4>
+                            <p>The perfect comfort food combo 😋</p>
+                        </div>
+                    </div>
+                    <div class="food-card" data-aos="zoom-in" data-aos-delay="200">
+                        <div class="food-image">
+                            <img src="paneer_makhani_pizza_1768461689726.png"
+                                alt="Paneer Makhani Pizza">
+                            <div class="food-overlay">
+                                <i class="fas fa-heart"></i>
+                            </div>
+                        </div>
+                        <div class="food-content">
+                            <h4>🍕 Paneer Makhani Pizza</h4>
+                            <p>Fusion perfection 🤤</p>
+                        </div>
+                    </div>
+                    <div class="food-card" data-aos="zoom-in" data-aos-delay="300">
+                        <div class="food-image">
+                            <img src="nanded_khichadi_1768461710983.png"
+                                alt="Nanded Khichadi">
+                            <div class="food-overlay">
+                                <i class="fas fa-heart"></i>
+                            </div>
+                        </div>
+                        <div class="food-content">
+                            <h4>🍲 Khichadi from Nanded</h4>
+                            <p>Taste of home 🏡💛</p>
+                        </div>
+                    </div>
+                    <div class="food-card" data-aos="zoom-in" data-aos-delay="400">
+                        <div class="food-image">
+                            <img src="biryani_dish_1768461731261.png"
+                                alt="Biryani">
+                            <div class="food-overlay">
+                                <i class="fas fa-heart"></i>
+                            </div>
+                        </div>
+                        <div class="food-content">
+                            <h4>🍛 Aromatic Biryani</h4>
+                            <p>Royal feast 👑✨</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Makeup Collection -->
+            <div class="makeup-showcase" data-aos="fade-up">
+                <div class="makeup-grid">
+                    <div class="makeup-image-col">
+                        <img src="makeup_collection_1768461752792.png"
+                            alt="Makeup Collection">
+                    </div>
+                    <div class="makeup-content-col">
+                        <h3>💄 Your Creative Canvas ✨</h3>
+                        <p>Every palette tells a story, every brush stroke is art. 🎨 Your passion for makeup isn't just
+                            about beauty - it's about self-expression, creativity, and empowerment. 💜</p>
+                        <p>Building your own makeup products shows your vision and determination to create something
+                            extraordinary. 🚀💎</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Inspiration Section -->
+    <section class="inspiration-section">
+        <div class="container text-center">
+            <div class="inspiration-card" data-aos="zoom-in">
+                <div class="inspiration-icon">
+                    <i class="fas fa-star"></i>
+                </div>
+                <h3>✨ Inspired by the Best ✨</h3>
+                <p class="inspiration-name">👑 Kylie Jenner 👑</p>
+                <p>Just like your favorite icon, you're building an empire, one dream at a time. 💼💜 Your
+                    entrepreneurial spirit and passion for beauty will take you to incredible heights. 🚀✨</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Dreams Section -->
+    <section class="dreams-section" id="dreams">
+        <div class="container">
+            <h2 class="section-title text-center" data-aos="fade-up">Your Dreams Are Valid 💎✨</h2>
+            <p class="section-subtitle text-center" data-aos="fade-up" data-aos-delay="100">And they're all coming true
+                🌟💜</p>
+
+            <div class="dreams-grid">
+                <div class="dream-card" data-aos="fade-right" data-aos-delay="100">
+                    <div class="dream-number">01</div>
+                    <h4>💼 Building Your Empire</h4>
+                    <p>Your makeup line is just the beginning. The world is ready for your vision. 🌍✨</p>
+                </div>
+                <div class="dream-card" data-aos="fade-right" data-aos-delay="200">
+                    <div class="dream-number">02</div>
+                    <h4>💰 Success & Abundance</h4>
+                    <p>You deserve all the wealth and success coming your way. Keep manifesting! 💎🌟</p>
+                </div>
+                <div class="dream-card" data-aos="fade-right" data-aos-delay="300">
+                    <div class="dream-number">03</div>
+                    <h4>🌟 Living Your Best Life</h4>
+                    <p>From modeling to entrepreneurship, you're creating the life of your dreams. 💜✨</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Wishes Section -->
+    <section class="wishes-section">
+        <div class="container">
+            <h2 class="section-title text-center" data-aos="fade-up">Birthday Wishes 🎂✨</h2>
+
+            <div class="wishes-grid">
+                <div class="wish-card" data-aos="flip-left" data-aos-delay="100">
+                    <i class="fas fa-heart"></i>
+                    <h3>Endless Joy</h3>
+                    <p>May your days be filled with laughter and happiness 😊💜</p>
+                </div>
+                <div class="wish-card" data-aos="flip-left" data-aos-delay="200">
+                    <i class="fas fa-star"></i>
+                    <h3>Dreams Come True</h3>
+                    <p>All your aspirations manifesting into reality ✨🌟</p>
+                </div>
+                <div class="wish-card" data-aos="flip-left" data-aos-delay="300">
+                    <i class="fas fa-gem"></i>
+                    <h3>Unlimited Success</h3>
+                    <p>Your makeup brand becoming a global sensation 💎🚀</p>
+                </div>
+                <div class="wish-card" data-aos="flip-left" data-aos-delay="400">
+                    <i class="fas fa-crown"></i>
+                    <h3>Recognition</h3>
+                    <p>The world seeing your incredible talent 👑💫</p>
+                </div>
+                <div class="wish-card" data-aos="flip-left" data-aos-delay="500">
+                    <i class="fas fa-infinity"></i>
+                    <h3>Forever Happiness</h3>
+                    <p>Joy that never ends 💖♾️</p>
+                </div>
+                <div class="wish-card" data-aos="flip-left" data-aos-delay="600">
+                    <i class="fas fa-rocket"></i>
+                    <h3>Limitless Growth</h3>
+                    <p>Your journey to the stars 🌟🚀</p>
+                </div>
+            </div>
+
+            <div class="final-message" data-aos="fade-up" data-aos-delay="700">
+                <p>You are destined for greatness, and this is just the beginning! 🌟💜</p>
+                <h3>Happy Birthday, Chetana! 🎂✨</h3>
+                <p class="love-note">I Love You! 💜💖</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Instagram CTA -->
+    <section class="instagram-section">
+        <div class="container text-center">
+            <i class="fab fa-instagram instagram-icon"></i>
+            <h2>Follow Her Journey</h2>
+            <p class="instagram-handle">@theclassybuzz</p>
+            <a href="https://instagram.com/theclassybuzz" target="_blank" class="btn-instagram">
+                <i class="fab fa-instagram"></i> Follow on Instagram
+            </a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>Made with 💜 for Chetana Wawle</p>
+        <p>January 16, 2026</p>
+    </footer>
+
+    <!-- Lightbox -->
+    <div class="lightbox hidden" id="lightbox">
+        <button class="lightbox-close" id="lightboxClose">&times;</button>
+        <button class="lightbox-prev" id="lightboxPrev"><i class="fas fa-chevron-left"></i></button>
+        <button class="lightbox-next" id="lightboxNext"><i class="fas fa-chevron-right"></i></button>
+        <img src="" alt="" id="lightboxImage">
+        <div class="lightbox-counter" id="lightboxCounter"></div>
+    </div>
+
+    <!-- Test Button (Hidden for production) -->
+    <button class="test-btn" id="testBtn">🎆 Test Celebration</button>
+
+    <!-- Particles.js -->
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>

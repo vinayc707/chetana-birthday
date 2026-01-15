@@ -1,0 +1,14 @@
+# Dependencies
+node_modules/
+
+# Old files
+birthday-new.html
+styles-new.css
+script-new.js
+birthday.html
+styles.css.old
+script.js.old
+
+# System files
+.DS_Store
+*.log
